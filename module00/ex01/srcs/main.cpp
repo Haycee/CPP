@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:42:20 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/01 16:04:04 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/03 01:12:46 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,19 @@ int main(void)
 	Phonebook phonebook;
 	std::string command;
 
-	while (command.compare("EXIT") != 0)
+	while (command == "EXIT")
 	{
  		command = prompt_contact();
-		if (command.empty())
+		if (command.empty() == true)
 			return (0);
-		if (command.compare("ADD") == 0)
+		if (command == "ADD")
 		{
 			if (!phonebook.add_contact())
 				return (0);
 		}
 		else
-		{
 			if (!phonebook.display_contact())
 				return (0);
-		}
 	}
 	return (0);
 }
