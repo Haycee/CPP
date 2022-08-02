@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:06:58 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/02 04:05:16 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/02 18:57:48 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main(int argc, char *argv[])
 {
-	std::string	literal = argv[1];
+	std::string	literal;
 	Converter	*converter;
 
 	if (argc != 2)
@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
 		std::cout << "Usage: ./convert literal" << std::endl;
 		return (0);
 	}
+
+	literal = argv[1];
 
 	try
 	{

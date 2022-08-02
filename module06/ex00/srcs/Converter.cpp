@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   converter.cpp                                      :+:      :+:    :+:   */
+/*   Converter.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 01:10:33 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/02 03:59:26 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/02 19:05:59 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,9 @@ void	Converter::printInt(void) const
 
 void	Converter::printFloat(void) const
 {
-	if (static_cast<float>(this->_literal) == static_cast<int>(this->_literal))
+	if (this->_literal < -FLT_MAX || this->_literal > FLT_MAX)
+		std::cout << "float: inff" << std::endl;
+	else if (static_cast<float>(this->_literal) == static_cast<int>(this->_literal))
 		std::cout << "float: " << static_cast<float>(this->_literal) << ".0f" << std::endl;
 	else
 		std::cout << "float: " << static_cast<float>(this->_literal) << "f" << std::endl;
