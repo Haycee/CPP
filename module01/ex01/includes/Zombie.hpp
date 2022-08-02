@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:45:14 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/06 19:57:09 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/03 01:39:27 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ class Zombie
 {
 	public:
 
-		Zombie() {};
+		Zombie();
 		Zombie(std::string name);
 		~Zombie(void);
 
 		void announce(void);
 
 	private:
+
 		std::string	_name;
 };
