@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:06:58 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/03 00:15:33 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/03 00:20:10 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	identify(Base* p)
 	}
 }
 
-void identify(Base& p)
+void	identify(Base& p)
 {
 	try {
 		A &a = dynamic_cast<A&>(p);
