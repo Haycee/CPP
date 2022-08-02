@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 15:57:24 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/03 01:54:57 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ScavTrap::~ScavTrap(void)
 	return;
 }
 
-void	ScavTrap::guardGate(void)
+void	ScavTrap::guardGate(void) const
 {
 	std::cout << "ScavTrap have enterred in Gate keeper mode." << std::endl;
 }
