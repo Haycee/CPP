@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 17:14:44 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/31 19:40:52 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/03 02:22:52 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Intern::~Intern(void)
 	return;
 }
 
-int	Intern::findForm(std::string form) const
+int	Intern::_findForm(std::string form) const
 {
 	std::string forms[3] = {"presidential", "robotomy", "shrubbery"};
 	std::string	str = form.substr(0, form.find(" "));
@@ -45,7 +45,7 @@ int	Intern::findForm(std::string form) const
 
 AForm	*Intern::makeForm(std::string form, std::string target) const
 {	
-	int	formNumber = findForm(form);
+	int	formNumber = _findForm(form);
 	std::cout << formNumber << std::endl;
 
 
