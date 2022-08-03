@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/29 16:55:33 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/03 02:10:47 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ int	main(void)
 
 
 	Bureaucrat	Irving("Irving", 150);
-	Form		severance("severance", 1, 1);
+	Form		severanceBis("severance", 1, 1);
 	
 	std::cout << std::endl << Irving << std::endl << std::endl;
-	std::cout << severance << std::endl << std::endl;
+	std::cout << severanceBis << std::endl << std::endl;
 
-	Irving.signForm(severance);
+	Irving.signForm(severanceBis);
 
-	std::cout << std::endl << severance << std::endl << std::endl;
+	std::cout << std::endl << severanceBis << std::endl << std::endl;
 
 	return (0);
 }
