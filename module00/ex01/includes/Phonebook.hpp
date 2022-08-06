@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.hpp                                :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:50:56 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/01 15:51:32 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/06 21:49:48 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 class Phonebook
 {
 	public:
-	
+
 		Phonebook(void);
 		~Phonebook(void);
 
-		int	add_contact(void);
-		int	display_contact(void);
+		int	addContact(void);
+		int	displayContact(void);
 
 	private:
 		Contact	_contact[8];
-		int		_contact_count;
-		int		_contact_index;
-		int		_prompt_contact_index(void);
+		int		_contactCount;
+		int		_contactIndex;
+		int		_promptContactIndex(void);
 };

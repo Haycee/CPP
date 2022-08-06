@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.cpp                                :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:43:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/01 15:51:27 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/06 22:01:49 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Phonebook::Phonebook(void)
 {
-	this->_contact_count = 0;
-	this->_contact_index = 0;
+	this->_contactCount = 0;
+	this->_contactIndex = 0;
 	return;
 }
 
@@ -24,42 +24,42 @@ Phonebook::~Phonebook(void)
 	return;
 }
 
-int	Phonebook::add_contact(void)
+int	Phonebook::addContact(void)
 {
-	if (!this->_contact[this->_contact_index].set_info(this->_contact_index))
+	if (!this->_contact[this->_contactIndex].setInfo(this->_contactIndex))
 		return (0);
-	this->_contact_index += 1;
-	if (this->_contact_index > 7)
-		this->_contact_index = 0;
 
-	if (this->_contact_count < 7)
-		this->_contact_count += 1;
+	this->_contactIndex += 1;
+	if (this->_contactIndex > 7)
+		this->_contactIndex = 0;
+
+	if (this->_contactCount < 7)
+		this->_contactCount += 1;
 	return (1);
 }
 
-int	Phonebook::_prompt_contact_index(void)
+int	Phonebook::_promptContactIndex(void)
 {
-	std::string	contact;
+	std::string	contactNumber;
 	int			index;
-	
-	do
-	{
+
+	do	{
 		std::cout << "Select contact: ";
-		std::cin >> contact;
+		std::cin >> contactNumber;
 		if (std::cin.eof())
 			return(-1);
-		std::istringstream(contact) >> index;
-	} while(index < 0 || index >= this->_contact_count);
+		std::istringstream(contactNumber) >> index;
+	} while(index < 0 || index >= this->_contactCount);
 	return (index);
 }
 
-int	Phonebook::display_contact(void)
+int	Phonebook::displayContact(void)
 {
-	for (int i = 0; i < this->_contact_count; i++)
-		this->_contact[i].print_recap_info();
-	int index = _prompt_contact_index();
+	for (int i = 0; i < this->_contactCount; i++)
+		this->_contact[i].printRecapInfo();
+	int index = _promptContactIndex();
 	if (index == -1)
 		return (0);
-	this->_contact[index].print_info();
+	this->_contact[index].printInfo();
 	return (1);
 }

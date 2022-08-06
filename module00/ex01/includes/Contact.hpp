@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.class.hpp                                  :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:50:56 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/01 15:59:33 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/06 21:54:28 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ class Contact
 		Contact(void);
 		~Contact(void);
 
-		int		set_info(int i);
-		void	print_info(void) const;
-		void	print_recap_info(void);
+		int		setInfo(int i);
+		void	printInfo(void) const;
+		void	printRecapInfo(void);
 
 	private:
 		int			_index;
-		std::string	_first_name;
-		std::string	_last_name;
+		std::string	_firstName;
+		std::string	_lastName;
 		std::string	_nickname;
-		std::string	_phone_number;
-		std::string	_darkest_secret;
-		std::string	_format_str(std::string str);
+		std::string	_phoneNumber;
+		std::string	_darkestSecret;
+		std::string	_formatStr(std::string str);
 };
