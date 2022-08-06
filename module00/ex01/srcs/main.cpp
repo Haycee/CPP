@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:42:20 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/06 22:16:51 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/06 22:19:26 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ static std::string	promptContact(void);
 
 int main(void)
 {
-	Phonebook phonebook;
-	std::string command;
+	Phonebook	phonebook;
+	std::string	command;
 
 	do
 	{
