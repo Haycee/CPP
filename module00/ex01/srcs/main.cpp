@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:42:20 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/06 22:19:26 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/06 22:23:29 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ static std::string	promptContact(void)
 		std::cin >> command;
 		if (std::cin.eof())
 			return ("");
-	} while (command.compare("ADD") != 0 && command.compare("SEARCH") != 0 && command.compare("EXIT") != 0);
+	} while (command != "ADD" && command != "SEARCH" && command != "EXIT");
 	return (command);
 }
