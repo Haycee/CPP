@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:43:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/06 22:01:49 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/08 10:41:39 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ int	Phonebook::_promptContactIndex(void)
 
 int	Phonebook::displayContact(void)
 {
+	if (this->_contactCount == 0)
+	{
+		std::cout << "There is no contact in this phonebook." << std::endl;
+		return (1);
+	}
 	for (int i = 0; i < this->_contactCount; i++)
 		this->_contact[i].printRecapInfo();
 	int index = _promptContactIndex();
