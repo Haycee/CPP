@@ -6,16 +6,15 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:54 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 00:38:18 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 10:59:23 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat() : _name("Default")
 {
 	std::cout << "Bureaucrat Default constructor called" << std::endl;
-	this->_name = "Default";
 	this->_grade = 150;
 	return;
 }
@@ -31,7 +30,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 		this->_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const & src) 
+Bureaucrat::Bureaucrat(Bureaucrat const & src) : _name(src.getName())
 {
 	std::cout << "Bureaucrat Copy constructor called" << std::endl;
 	*this = src;
@@ -108,7 +107,6 @@ int	Bureaucrat::getGrade(void) const
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const & rhs)
 {
 	std::cout << "Assignment operator called" << std::endl;
-	this->_name = rhs.getName();
 	this->_grade = rhs.getGrade();
 	return (*this);
 }
