@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:42:27 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 01:06:58 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 11:33:50 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const & rhs)
 {
-	AForm::operator=(rhs);
+	(void)rhs;
 	return *this;
 }

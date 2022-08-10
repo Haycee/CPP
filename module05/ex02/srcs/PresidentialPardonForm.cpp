@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:42:27 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 01:18:36 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 11:34:18 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)
 {
-	AForm::operator=(rhs);
+	(void)rhs;
 	return *this;
 }

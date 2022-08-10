@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:41:40 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 00:42:05 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 11:32:41 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class RobotomyRequestForm : public AForm
 		~RobotomyRequestForm(void);
 
 		virtual void	execute(Bureaucrat const & executor) const;
+
+	private :
 
 		RobotomyRequestForm &	operator=(RobotomyRequestForm const & rhs);
 };
