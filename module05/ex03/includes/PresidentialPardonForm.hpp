@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 01:12:35 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 01:12:46 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 11:36:54 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class PresidentialPardonForm : public AForm
 		~PresidentialPardonForm(void);
 
 		virtual void	execute(Bureaucrat const & executor) const;
+
+	private :
 
 		PresidentialPardonForm &	operator=(PresidentialPardonForm const & rhs);
 };

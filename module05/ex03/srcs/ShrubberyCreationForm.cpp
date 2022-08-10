@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 12:48:28 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 00:31:40 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 11:36:32 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)
 {
-	AForm::operator=(rhs);
+	(void)rhs;
 	return *this;
 }
