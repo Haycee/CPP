@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 17:27:01 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/28 23:45:26 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 11:24:17 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,14 @@ class Form
 				}
 		};
 
-		Form &	operator=(Form const & rhs);
-
 	private:
 
 		const std::string	_name;
 		const int			_signGrade;
 		const int			_execGrade;
 		bool				_isSigned;
+
+		Form &	operator=(Form const & rhs);
 };
 
 std::ostream &	operator<<(std::ostream & o, Form const & rhs);
