@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:52 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/10 10:42:26 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/10 10:54:30 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ class Bureaucrat
 				}
 		};
 
-		Bureaucrat &	operator=(Bureaucrat const & rhs);
-
 	private:
 
 		const std::string	_name;
 		int					_grade;
+
+		Bureaucrat &	operator=(Bureaucrat const & rhs);
 };
 
 std::ostream &	operator<<(std::ostream & o, Bureaucrat const & rhs);
