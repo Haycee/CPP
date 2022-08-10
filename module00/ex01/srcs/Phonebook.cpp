@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:43:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/08 10:41:39 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/08 15:40:15 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,15 @@ Phonebook::~Phonebook(void)
 
 int	Phonebook::addContact(void)
 {
+	if (this->_contactIndex == 8)
+		this->_contactIndex = 0;
+	
 	if (!this->_contact[this->_contactIndex].setInfo(this->_contactIndex))
 		return (0);
 
 	this->_contactIndex += 1;
-	if (this->_contactIndex > 7)
-		this->_contactIndex = 0;
-
-	if (this->_contactCount < 7)
+	
+	if (this->_contactCount < 8)
 		this->_contactCount += 1;
 	return (1);
 }
@@ -61,7 +62,9 @@ int	Phonebook::displayContact(void)
 		return (1);
 	}
 	for (int i = 0; i < this->_contactCount; i++)
+	{
 		this->_contact[i].printRecapInfo();
+	}
 	int index = _promptContactIndex();
 	if (index == -1)
 		return (0);

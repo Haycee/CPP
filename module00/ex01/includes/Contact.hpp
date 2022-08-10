@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:50:56 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/06 21:54:28 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/08 15:21:17 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Contact
 
 		int		setInfo(int i);
 		void	printInfo(void) const;
-		void	printRecapInfo(void);
+		void	printRecapInfo(void) const;
 
 	private:
 		int			_index;
@@ -31,5 +31,5 @@ class Contact
 		std::string	_nickname;
 		std::string	_phoneNumber;
 		std::string	_darkestSecret;
-		std::string	_formatStr(std::string str);
+		std::string	_formatStr(std::string str) const;
 };

@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:43:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/06 21:52:54 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/08 15:20:19 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	Contact::printInfo(void) const
 	std::cout << "Darkest Secret:	" << this->_darkestSecret << std::endl;
 }
 
-std::string	Contact::_formatStr(std::string str)
+std::string	Contact::_formatStr(std::string str) const
 {
 	if (str.length() < 10)
 		while(str.length() != 10)
@@ -71,7 +71,7 @@ std::string	Contact::_formatStr(std::string str)
 	return (str);
 }
 
-void	Contact::printRecapInfo(void)
+void	Contact::printRecapInfo(void) const
 {
 	std::cout << "|          " << this->_index << "|";
 	std::cout << _formatStr(this->_firstName) << "|";
