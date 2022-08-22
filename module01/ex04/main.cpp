@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:44:01 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/22 11:24:52 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/22 13:34:45 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 
 static std::string	findAndReplace(std::string str, std::string s1, std::string s2)
 {
-	int pos = 0;
+	std::size_t pos = 0;
 
 	if (s1.empty() || s1.compare(s2) == 0)
 		return (str);
