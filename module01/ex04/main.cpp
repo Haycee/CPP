@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:44:01 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/08 18:04:34 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/22 11:20:45 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ static std::string	findAndReplace(std::string str, std::string s1, std::string s
 		pos = str.find(s1, pos);
 		str.erase(pos, s1.length());
 		str.insert(pos, s2);
+		pos += + s2.length();
 	}
 	return (str);
 }
