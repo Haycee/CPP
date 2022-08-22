@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:42:27 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/10 11:33:50 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/22 11:42:03 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	else
 	{
 		std::cout << "*drilling noises*" << std::endl;
-		srand(time(NULL));
 		if ((rand() % 2) == 0)
 			std::cout << this->getTarget() << " has been robotomized." << std::endl;
 		else

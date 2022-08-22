@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/30 01:19:39 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/22 11:42:29 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 
 int	main(void)
 {
+	srand(time(NULL));
+
 	Bureaucrat				mark("Mark", 1);
 	ShrubberyCreationForm	shrubForm("Helly");
 	
