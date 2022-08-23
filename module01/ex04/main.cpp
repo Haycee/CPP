@@ -15,8 +15,6 @@
 #include <sstream>
 #include <string>
 
-// check if file is a directory
-
 static std::string	findAndReplace(std::string str, std::string s1, std::string s2);
 
 int main(int argc, char **argv)
