@@ -6,7 +6,7 @@
 #    By: agirardi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/15 09:57:24 by agirardi          #+#    #+#              #
-#    Updated: 2022/06/29 16:23:35 by agirardi         ###   ########lyon.fr    #
+#    Updated: 2022/08/23 19:24:29 by agirardi         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		:=	megaphone
 
 OBJ_PATH	:=	.objects
 
-LST_SRCS	:=	megaphone.cpp \
+LST_SRCS	:=	megaphone.cpp
 
 LST_OBJS	:=	$(LST_SRCS:.cpp=.o)
 
@@ -47,7 +47,7 @@ $(OBJ_PATH):
 	mkdir -p $(OBJ_PATH)
 
 ${NAME}: ${OBJS}
-	printf "$(GREEN)> All the .cpp files from so_long have been compiled successfully !$(END)\n"
+	printf "$(GREEN)> All the .cpp files have been compiled successfully !$(END)\n"
 	printf "$(BLUE)> Creating the executable file :$(END) $@\n"
 	${CC} ${OBJS} -o $(NAME)
 	printf "$(GREEN)> Executable file has been created successfully !$(END)\n"
