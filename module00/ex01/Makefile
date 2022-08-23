@@ -6,7 +6,7 @@
 #    By: agirardi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/15 09:57:24 by agirardi          #+#    #+#              #
-#    Updated: 2022/07/10 02:07:27 by agirardi         ###   ########lyon.fr    #
+#    Updated: 2022/08/23 19:30:51 by agirardi         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ $(OBJ_PATH):
 	mkdir -p $(OBJ_PATH)
 
 ${NAME}: ${OBJS}
-	printf "$(GREEN)> All the .cpp files from so_long have been compiled successfully !$(END)\n"
+	printf "$(GREEN)> All the .cpp files have been compiled successfully !$(END)\n"
 	printf "$(BLUE)> Creating the executable file :$(END) $@\n"
 	${CC} ${CFLAGS} ${OBJS} -o $(NAME)
 	printf "$(GREEN)> Executable file has been created successfully !$(END)\n"
