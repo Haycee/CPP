@@ -6,13 +6,13 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:42:20 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/06 22:23:29 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/23 20:10:24 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-static std::string	promptContact(void);
+static std::string	displayPrompt(void);
 
 int main(void)
 {
@@ -21,7 +21,7 @@ int main(void)
 
 	do
 	{
- 		command = promptContact();
+ 		command = displayPrompt();
 		if (command.empty() == true)
 			return (0);
 		if (command == "ADD")
@@ -34,7 +34,7 @@ int main(void)
 	return (0);
 }
 
-static std::string	promptContact(void)
+static std::string	displayPrompt(void)
 {
 	std::string command;
 	do

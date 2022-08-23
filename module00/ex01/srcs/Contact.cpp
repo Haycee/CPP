@@ -6,13 +6,13 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:43:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/08 15:20:19 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/23 19:51:15 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Contact::Contact(void)
+Contact::Contact(void) : _index(0)
 {
 	return;
 }

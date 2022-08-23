@@ -6,16 +6,14 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:43:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/08 15:40:15 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/23 20:22:27 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Phonebook::Phonebook(void)
+Phonebook::Phonebook(void) : _contactCount(0), _contactIndex(0)
 {
-	this->_contactCount = 0;
-	this->_contactIndex = 0;
 	return;
 }
 
@@ -32,10 +30,10 @@ int	Phonebook::addContact(void)
 	if (!this->_contact[this->_contactIndex].setInfo(this->_contactIndex))
 		return (0);
 
-	this->_contactIndex += 1;
+	this->_contactIndex++;
 	
 	if (this->_contactCount < 8)
-		this->_contactCount += 1;
+		this->_contactCount++;
 	return (1);
 }
 
@@ -44,12 +42,14 @@ int	Phonebook::_promptContactIndex(void)
 	std::string	contactNumber;
 	int			index;
 
-	do	{
+	index = -1;
+	do {
 		std::cout << "Select contact: ";
 		std::cin >> contactNumber;
 		if (std::cin.eof())
 			return(-1);
-		std::istringstream(contactNumber) >> index;
+		if (contactNumber.length() == 1 && contactNumber[0] >= '0' && contactNumber[0] <= '9')
+			std::istringstream(contactNumber) >> index;
 	} while(index < 0 || index >= this->_contactCount);
 	return (index);
 }
@@ -65,7 +65,7 @@ int	Phonebook::displayContact(void)
 	{
 		this->_contact[i].printRecapInfo();
 	}
-	int index = _promptContactIndex();
+	int index = this->_promptContactIndex();
 	if (index == -1)
 		return (0);
 	this->_contact[index].printInfo();
