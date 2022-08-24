@@ -6,16 +6,15 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/03 01:48:10 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 13:18:02 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Fixed::Fixed(void)
+Fixed::Fixed(void) : _fixed_point_value(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	this->_fixed_point_value = 0;
 	return;
 }
 
@@ -28,7 +27,6 @@ Fixed::Fixed(int const num)
 Fixed::Fixed(float const num)
 {
 	std::cout << "Float constructor called" << std::endl;
-	// this->_fixed_point_value = roundf(num * std::pow(2, _fract_bits_number)); ?
 	this->_fixed_point_value = roundf(num * (1 << this->_fract_bits_number));
 }
 
@@ -44,7 +42,7 @@ Fixed::~Fixed(void)
 	return;
 }
 
-int		Fixed::getRawBits(void) const
+int	Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_fixed_point_value);
@@ -61,7 +59,7 @@ float	Fixed::toFloat(void) const
 	return ((float)this->_fixed_point_value / (1 << this->_fract_bits_number));
 }
 
-int		Fixed::toInt(void) const
+int	Fixed::toInt(void) const
 {
 	return ((int)this->_fixed_point_value >> this->_fract_bits_number);
 }
