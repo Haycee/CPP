@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:11:15 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/07 19:57:35 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 10:51:58 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Weapon::~Weapon(void)
 	return;
 }
 
-std::string const &	Weapon::getType(void)
+std::string const &	Weapon::getType(void) const
 {
 	return (this->_type);
 }
