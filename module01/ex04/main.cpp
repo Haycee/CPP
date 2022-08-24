@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:44:01 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/22 13:34:45 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 16:57:13 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(int argc, char **argv)
 {
 	std::ifstream	infile;
 	std::ofstream	outfile;
+	std::string		infileName;
 	std::string		copy;
 	std::string		buffer;
 
@@ -30,7 +31,8 @@ int main(int argc, char **argv)
 		return (0);
 	}
 
-	infile.open(argv[1]);
+	infileName = argv[1];
+	infile.open(infileName);
 	if (infile.is_open())
 	{
 		while (std::getline(infile, buffer))
@@ -44,11 +46,11 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		std::cout << "Error: failed to open " << argv[1] << std::endl;
+		std::cout << "Error: failed to open " << infileName << std::endl;
 		return (1);
 	}
 
-	outfile.open("outfile");
+	outfile.open(infileName + ".replace");
 	if (outfile.is_open())
 	{
 		outfile << copy;
