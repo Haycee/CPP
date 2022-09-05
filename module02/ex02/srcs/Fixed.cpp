@@ -6,25 +6,27 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/24 14:04:19 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 03:43:43 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Fixed::Fixed(void)
+Fixed::Fixed(void) : _fixed_point_value(0)
 {
-	this->_fixed_point_value = 0;
+	std::cout << "Default constructor called" << std::endl;
 	return;
 }
 
-Fixed::Fixed(int const num)
+Fixed::Fixed(int const num) : _fixed_point_value(0)
 {
+	std::cout << "Int constructor called" << std::endl;
 	this->_fixed_point_value = num << this->_fract_bits_number;
 }
 
-Fixed::Fixed(float const num)
+Fixed::Fixed(float const num) : _fixed_point_value(0)
 {
+	std::cout << "Float constructor called" << std::endl;
 	this->_fixed_point_value = roundf(num * (1 << this->_fract_bits_number));
 }
 
@@ -35,6 +37,7 @@ Fixed::Fixed(Fixed const & src)
 
 Fixed::~Fixed(void)
 {
+	std::cout << "Destructor called" << std::endl;
 	return;
 }
 
@@ -139,24 +142,36 @@ bool	Fixed::operator!=(Fixed const & rhs) const
 	return false;
 }
 
-Fixed	Fixed::operator+(Fixed const & rhs)
+Fixed	Fixed::operator+(Fixed const & rhs) const
 {
-	return Fixed(this->toInt() + rhs.toInt());
+	Fixed res;
+
+	res = this->toFloat() + rhs.toFloat();
+	return (res);
 }
 
-Fixed	Fixed::operator-(Fixed const & rhs)
+Fixed	Fixed::operator-(Fixed const & rhs) const
 {
-	return Fixed(this->toInt() - rhs.toInt());
+	Fixed res;
+
+	res = this->toFloat() - rhs.toFloat();
+	return (res);
 }
 
-Fixed	Fixed::operator*(Fixed const & rhs)
+Fixed	Fixed::operator*(Fixed const & rhs) const
 {
-	return Fixed(this->toFloat() * rhs.toFloat());
+	Fixed res;
+
+	res = this->toFloat() * rhs.toFloat();
+	return (res);
 }
 
-Fixed	Fixed::operator/(Fixed const & rhs)
+Fixed	Fixed::operator/(Fixed const & rhs) const
 {
-	return Fixed(this->toFloat() * rhs.toFloat());
+	Fixed res;
+
+	res = this->toFloat() / rhs.toFloat();
+	return (res);
 }
 
 Fixed &	Fixed::operator++()

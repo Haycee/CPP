@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:10:31 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/24 14:01:17 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 03:44:49 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main(void)
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl << std::endl;
-
 
 	Fixed	c(10);
 	Fixed	d(20);
