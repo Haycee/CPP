@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/24 13:18:02 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 03:10:53 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Fixed::Fixed(void) : _fixed_point_value(0)
 	return;
 }
 
-Fixed::Fixed(int const num)
+Fixed::Fixed(int const num) : _fixed_point_value(0)
 {
 	std::cout << "Int constructor called" << std::endl;
 	this->_fixed_point_value = num << this->_fract_bits_number;
 }
 
-Fixed::Fixed(float const num)
+Fixed::Fixed(float const num) : _fixed_point_value(0)
 {
 	std::cout << "Float constructor called" << std::endl;
 	this->_fixed_point_value = roundf(num * (1 << this->_fract_bits_number));
@@ -56,7 +56,7 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)this->_fixed_point_value / (1 << this->_fract_bits_number));
+	return ((float)this->_fixed_point_value / (float)(1 << this->_fract_bits_number));
 }
 
 int	Fixed::toInt(void) const
