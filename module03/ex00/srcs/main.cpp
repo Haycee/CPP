@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/13 14:15:34 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 14:23:59 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	main(void)
 	test.attack("B");
 	test.takeDamage(10);
 	test.beRepaired(10);
-	return 0;
+
+	return (0);
 }

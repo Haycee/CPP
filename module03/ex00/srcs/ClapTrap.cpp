@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 15:58:14 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 14:22:17 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,9 @@ ClapTrap::ClapTrap()
 	return;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "Name constructor called" << std::endl;
-	this->_hitPoints = 10;
-	this->_energyPoints = 10;
-	this->_attackDamage = 0;
 	return;
 }
 
