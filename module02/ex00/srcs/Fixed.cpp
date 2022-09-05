@@ -6,23 +6,22 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/24 11:28:31 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 02:52:34 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Fixed::Fixed(void)
+Fixed::Fixed(void) : _fixed_point_value(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	this->_fixed_point_value = 0;
 	return;
 }
 
 Fixed::Fixed(Fixed const & src)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->_fixed_point_value = src.getRawBits();
+	*this = src;
 }
 
 Fixed::~Fixed(void)
@@ -47,5 +46,5 @@ Fixed &	Fixed::operator=(Fixed const & rhs)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->_fixed_point_value = rhs.getRawBits();
-	return *this;
+	return (*this);
 }
