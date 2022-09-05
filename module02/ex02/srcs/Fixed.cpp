@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/05 03:43:43 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/05 10:49:59 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Fixed::Fixed(void) : _fixed_point_value(0)
 	return;
 }
 
-Fixed::Fixed(int const num) : _fixed_point_value(0)
+Fixed::Fixed(int const num)
 {
 	std::cout << "Int constructor called" << std::endl;
 	this->_fixed_point_value = num << this->_fract_bits_number;
 }
 
-Fixed::Fixed(float const num) : _fixed_point_value(0)
+Fixed::Fixed(float const num)
 {
 	std::cout << "Float constructor called" << std::endl;
 	this->_fixed_point_value = roundf(num * (1 << this->_fract_bits_number));
