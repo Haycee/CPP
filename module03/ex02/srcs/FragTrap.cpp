@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:03:13 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/06 14:04:04 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 14:18:42 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,15 @@ FragTrap::~FragTrap(void)
 {
 	std::cout << "FragTrap Destructor called" << std::endl;
 	return;
+}
+
+void	FragTrap::attack(const std::string& target)
+{
+	if (this->_energyPoints > 0 && this->_hitPoints > 0)
+	{
+		std::cout << "FragTrap " << this->_name << " attacks " << target <<  ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+		this->_energyPoints--;
+	}
 }
 
 void	FragTrap::highFivesGuys(void) const

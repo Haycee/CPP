@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/06 14:02:31 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 14:17:26 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap Destructor called" << std::endl;
 	return;
+}
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (this->_energyPoints > 0 && this->_hitPoints > 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " attacks " << target <<  ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+		this->_energyPoints--;
+	}
 }
 
 void	ScavTrap::guardGate(void) const
