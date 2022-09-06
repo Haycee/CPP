@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/06 13:55:00 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 14:01:55 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 ScavTrap::ScavTrap()
 {
 	std::cout << "ScavTrap Default constructor called" << std::endl;
-	this->_name = "Default";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;

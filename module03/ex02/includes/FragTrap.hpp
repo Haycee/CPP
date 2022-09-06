@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:03:15 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 15:28:27 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 14:02:50 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class FragTrap : public ClapTrap
 		FragTrap(FragTrap const & src);
 		~FragTrap(void);
 
-		void highFivesGuys(void) const;
+		void	highFivesGuys(void) const;
 
 		FragTrap &	operator=(FragTrap const & rhs);
 };
