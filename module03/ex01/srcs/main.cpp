@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 14:56:27 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 13:59:18 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int	main(void)
 
 	std::cout << std::endl << std::endl;
 
-	return 0;
+	return (0);
 }
