@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/06 14:00:59 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/06 14:09:54 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ std::string	ClapTrap::getType(void) const
 {
 	if (this->_attackDamage == 0)
 		return ((std::string)"ClapTrap ");
-	if (this->_attackDamage == 20)
+	else if (this->_attackDamage == 20)
 		return ((std::string)"ScavTrap ");
 	else
 		return ((std::string)"FragTrap ");
