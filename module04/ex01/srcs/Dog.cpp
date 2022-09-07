@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:55 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/07 15:15:54 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 16:42:24 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ Brain &	Dog::getBrain(void) const
 
 Dog & Dog::operator=(Dog const & rhs)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Dog Assignment operator called" << std::endl;
 	this->_type = rhs.getType();
 	*(this->_brain) = rhs.getBrain();
 
