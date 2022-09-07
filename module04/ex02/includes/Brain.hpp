@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:13:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/24 19:05:53 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 15:19:01 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Brain
 
 		void		setIdea(int i, std::string str);
 		std::string	getIdea(int i) const;
-
+		Brain &		getBrain(void) const;
+	
 		Brain &	operator=(Brain const & rhs);
 
 	protected:

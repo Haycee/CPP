@@ -48,5 +48,6 @@ Brain & Brain::operator=(Brain const & rhs)
 	std::cout << "Assignment operator called" << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->_ideas[i] = rhs.getIdea(i);
+
 	return (*this);
 }

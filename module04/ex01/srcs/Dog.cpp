@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:55 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/24 17:32:43 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 15:15:54 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,16 @@ std::string	Dog::getIdea(int i) const
 	return (this->_brain->getIdea(i));
 }
 
+Brain &	Dog::getBrain(void) const
+{
+	return(*this->_brain);
+}
+
 Dog & Dog::operator=(Dog const & rhs)
 {
 	std::cout << "Assignment operator called" << std::endl;
 	this->_type = rhs.getType();
-	for (int i = 0; i < 100; i++)
-		this->setIdea(i, rhs.getIdea(i));
+	*(this->_brain) = rhs.getBrain();
+
 	return (*this);
 }

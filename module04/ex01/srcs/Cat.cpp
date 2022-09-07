@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:54 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/24 19:29:37 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 15:23:43 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ Cat::Cat()
 	std::cout << "Cat Default constructor called" << std::endl;
 	this->_type = "Cat";
 	this->_brain = new Brain();
+
 	return;
 }
 
@@ -48,11 +49,16 @@ std::string	Cat::getIdea(int i) const
 	return (this->_brain->getIdea(i));
 }
 
+Brain &	Cat::getBrain(void) const
+{
+	return(*this->_brain);
+}
+
 Cat & Cat::operator=(Cat const & rhs)
 {
 	std::cout << "Assignment operator called" << std::endl;
 	this->_type = rhs.getType();
-	for (int i = 0; i < 100; i++)
-		this->setIdea(i, rhs.getIdea(i));
+	*(this->_brain) = rhs.getBrain();
+
 	return (*this);
 }
