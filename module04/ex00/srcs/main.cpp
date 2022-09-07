@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/07 11:37:05 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 16:10:32 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	Animal* animal = dog;
 	animal->makeSound();
 
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl << "============ WRONG CLASS TESTS ============ " << std::endl << std::endl << std::endl;
 
 	WrongAnimal* wmeta = new WrongAnimal();
 	std::cout << std::endl;
@@ -41,6 +41,12 @@ int	main(void)
 
 	wcat->makeSound();
 	wmeta->makeSound();
+
+	std::cout << std::endl << std::endl;
+
+	WrongCat catSound;
+	std::cout << std::endl;
+	catSound.makeSound();
 
 	std::cout << std::endl;
 
