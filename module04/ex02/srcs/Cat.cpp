@@ -6,21 +6,22 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:54 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/07 15:25:09 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 19:57:19 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 Cat::Cat()
+	: _brain(new Brain())
 {
 	std::cout << "Cat Default constructor called" << std::endl;
 	this->_type = "Cat";
-	this->_brain = new Brain();
 	return;
 }
 
 Cat::Cat(Cat const & src) 
+	: _brain(new Brain())
 {
 	std::cout << "Cat Copy constructor called" << std::endl;
 	*this = src;
