@@ -6,16 +6,16 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:12:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 23:10:19 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 11:18:34 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 Animal::Animal()
+	: _type("Default")
 {
 	std::cout << "Animal Default constructor called" << std::endl;
-	this->_type = "Default";
 	return;
 }
 

@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 23:47:01 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/07 11:37:05 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,43 @@
 int	main(void)
 {
 	Animal* meta = new Animal();
-	Animal* j = new Dog();
-	Animal* i = new Cat();
-
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-
+	std::cout << std::endl;
+	Animal* dog = new Dog();
+	std::cout << std::endl;
+	Animal* cat = new Cat();
 	std::cout << std::endl;
 
-	Animal* animal = j;
-	animal->makeSound(); //will output the dog sound!
-
+	std::cout << "dog type: " << dog->getType() << " " << std::endl;
+	dog->makeSound();
 	std::cout << std::endl;
+	std::cout << "cat type: " << cat->getType() << " " << std::endl;
+	cat->makeSound();
+
+	std::cout << std::endl << std::endl;
+
+	Animal* animal = dog;
+	animal->makeSound();
+
+	std::cout << std::endl << std::endl;
 
 	WrongAnimal* wmeta = new WrongAnimal();
-	WrongAnimal* wi = new WrongCat();
+	std::cout << std::endl;
+	WrongAnimal* wcat = new WrongCat();
+	std::cout << std::endl;
 
-	wi->makeSound();
+	wcat->makeSound();
 	wmeta->makeSound();
 
 	std::cout << std::endl;
 
 	delete meta;
-	delete i;
-	delete j;
+	delete dog;
+	delete cat;
 
 	std::cout << std::endl;
 
 	delete wmeta;
-	delete wi;
+	delete wcat;
 
 	return 0;
 }
