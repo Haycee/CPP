@@ -16,10 +16,8 @@
 template <typename T>
 typename T::iterator	easyfind(T & container, int num)
 {
-	typename T::iterator itr;
 
-	itr = std::find(container.begin(), container.end(), num);
-	if (itr == container.end())
+	if (std::find(container.begin(), container.end(), num) == container.end());
 		throw std::invalid_argument("num was not found.");
 	return (itr);
 }
