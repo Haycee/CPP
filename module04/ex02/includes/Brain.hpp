@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:13:12 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/07 15:19:01 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 01:30:25 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Brain
 	
 		Brain &	operator=(Brain const & rhs);
 
-	protected:
+	private:
 
 		std::string _ideas[100];
 };
