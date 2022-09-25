@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 23:18:14 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 23:19:53 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 01:25:59 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class WrongCat : public WrongAnimal
 		WrongCat(WrongCat const & src);
 		~WrongCat(void);
 
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 
 		WrongCat &	operator=(WrongCat const & rhs);
 };

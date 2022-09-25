@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 23:14:37 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 23:45:04 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 01:26:07 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class WrongAnimal
 
 		WrongAnimal();
 		WrongAnimal(WrongAnimal const & src);
-		virtual ~WrongAnimal(void);
+		~WrongAnimal(void);
 
 		std::string	getType(void) const;
 		void		makeSound(void) const;
