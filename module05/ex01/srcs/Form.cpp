@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 17:28:23 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/28 23:48:00 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 02:21:55 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Form::Form() : _name("Default"), _signGrade(1), _execGrade(1)
 Form::Form(std::string name, int signGrade, int execGrade) :
 	_name(name), _signGrade(signGrade), _execGrade(execGrade)
 {
-	if (signGrade < 0 || execGrade < 0)
+	if (signGrade < 1 || execGrade < 1)
 	{
 		throw GradeTooHighException();
 	}

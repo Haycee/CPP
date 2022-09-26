@@ -23,7 +23,7 @@ AForm::AForm()
 AForm::AForm(std::string name, int signGrade, int execGrade, std::string target)
 	: _name(name), _signGrade(signGrade), _execGrade(execGrade), _target(target)
 {
-	if (signGrade < 0 || execGrade < 0)
+	if (signGrade < 1 || execGrade < 1)
 	{
 		throw GradeTooHighException();
 	}
