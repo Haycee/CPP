@@ -6,16 +6,15 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:54 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/10 11:00:38 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 02:14:56 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Default")
+Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
 	std::cout << "Bureaucrat Default constructor called" << std::endl;
-	this->_grade = 150;
 	return;
 }
 
