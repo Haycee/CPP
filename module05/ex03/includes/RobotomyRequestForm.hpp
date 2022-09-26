@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:41:40 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/26 02:44:31 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 18:41:57 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class RobotomyRequestForm : public AForm
 
 	private :
 
-		std::string			_target;
+		std::string	_target;
 
 		RobotomyRequestForm &	operator=(RobotomyRequestForm const & rhs);
 };
