@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:42:27 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/26 02:58:45 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 19:50:21 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target)
 }
 
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src)
-	: AForm(src)
+	: AForm(src.getName(), src.getSignGrade(), src.getExecGrade()), _target(src._target)
 {
 	std::cout << "PresidentialPardonForm Copy constructor called" << std::endl;
 }
