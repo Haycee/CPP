@@ -23,6 +23,7 @@ AForm::AForm()
 AForm::AForm(std::string name, int signGrade, int execGrade, std::string target)
 	: _name(name), _signGrade(signGrade), _execGrade(execGrade), _target(target)
 {
+	std::cout << "AForm constructor called" << std::endl;
 	if (signGrade < 1 || execGrade < 1)
 	{
 		throw GradeTooHighException();
@@ -32,7 +33,6 @@ AForm::AForm(std::string name, int signGrade, int execGrade, std::string target)
 		throw GradeTooLowException();
 	}
 	this->_isSigned = false;
-	std::cout << "AForm constructor called" << std::endl;
 	return;
 }
 
