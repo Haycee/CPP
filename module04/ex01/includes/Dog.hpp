@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:54 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/07 15:21:51 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 10:52:41 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Dog : public Animal
 
 		Dog();
 		Dog(Dog const & src);
-		~Dog(void);
+		virtual ~Dog(void);
 
 		void			setIdea(int i, const std::string str);
 		std::string		getIdea(int i) const;

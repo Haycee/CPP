@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:51:52 by agirardi          #+#    #+#             */
-/*   Updated: 2022/07/23 19:19:03 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 10:51:45 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Cat : public Animal
 
 		Cat();
 		Cat(Cat const & src);
-		~Cat(void);
+		virtual ~Cat(void);
 
 		virtual void	makeSound(void) const;
 

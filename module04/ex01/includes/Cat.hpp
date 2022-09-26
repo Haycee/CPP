@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 01:04:37 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/07 15:21:50 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 10:52:42 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Cat : public Animal
 
 		Cat();
 		Cat(Cat const & src);
-		~Cat(void);
+		virtual ~Cat(void);
 
 		void			setIdea(int i, std::string str);
 		std::string		getIdea(int i) const;
