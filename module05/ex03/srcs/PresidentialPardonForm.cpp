@@ -6,21 +6,21 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:42:27 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/10 11:36:33 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 02:59:12 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm()
-	: AForm("PresidentialPardonForm", 72, 45, "Default")
+	: AForm("PresidentialPardonForm", 25, 5), _target("Default")
 {
 	std::cout << "PresidentialPardonForm Default constructor called" << std::endl;
 	return;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
-	: AForm("PresidentialPardonForm", 25, 5, target)
+	: AForm("PresidentialPardonForm", 25, 5), _target(target)
 {
 	std::cout << "PresidentialPardonForm constructor called" << std::endl;
 	return;
@@ -45,11 +45,11 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 	else if (this->checkExecGrade(executor) == false)
 		throw GradeTooLowException();
 	else
-		std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+		std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)
 {
-	(void)rhs;
+	this->_target = rhs._target;
 	return *this;
 }

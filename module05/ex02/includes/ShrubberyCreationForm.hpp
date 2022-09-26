@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 00:08:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/10 11:32:36 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 02:43:51 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class ShrubberyCreationForm : public AForm
 		virtual void	execute(Bureaucrat const & executor) const;
 
 	private :
+
+		std::string			_target;
 
 		ShrubberyCreationForm &	operator=(ShrubberyCreationForm const & rhs);
 };

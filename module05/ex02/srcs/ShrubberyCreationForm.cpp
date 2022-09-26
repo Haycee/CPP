@@ -6,21 +6,21 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 12:48:28 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/10 11:33:42 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 03:01:58 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm()
-	: AForm("ShrubberyCreationForm", 145, 137, "Default")
+	: AForm("ShrubberyCreationForm", 145, 137), _target("Default")
 {
 	std::cout << "ShrubberyCreationForm Default constructor called" << std::endl;
 	return;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
-	: AForm("ShrubberyCreationForm", 145, 137, target)
+	: AForm("ShrubberyCreationForm", 145, 137), _target(target)
 {
 	std::cout << "ShrubberyCreationForm constructor called" << std::endl;
 	return;
@@ -48,7 +48,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		throw GradeTooLowException();
 	else
 	{
-		outfile.open(this->getTarget() + "_shrubbery");
+		outfile.open(this->_target + "_shrubbery");
 		if (outfile.is_open())
 		{
 			outfile << "                                   # #### ####" << std::endl;
@@ -76,6 +76,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)
 {
-	(void)rhs;
+	this->_target = rhs._target;
 	return *this;
 }

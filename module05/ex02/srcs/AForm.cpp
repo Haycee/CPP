@@ -13,15 +13,15 @@
 #include "main.hpp"
 
 AForm::AForm()
-	: _name("Default"), _signGrade(1), _execGrade(1), _target("Default")
+	: _name("Default"), _signGrade(1), _execGrade(1)
 {
 	std::cout << "AForm Default constructor called" << std::endl;
 	this->_isSigned = false;
 	return;
 }
 
-AForm::AForm(std::string name, int signGrade, int execGrade, std::string target)
-	: _name(name), _signGrade(signGrade), _execGrade(execGrade), _target(target)
+AForm::AForm(std::string name, int signGrade, int execGrade)
+	: _name(name), _signGrade(signGrade), _execGrade(execGrade)
 {
 	std::cout << "AForm constructor called" << std::endl;
 	if (signGrade < 1 || execGrade < 1)
@@ -83,16 +83,10 @@ int	AForm::getIsSigned(void) const
 	return (this->_isSigned);
 }
 
-std::string	AForm::getTarget(void) const
-{
-	return (this->_target);
-}
-
 AForm & AForm::operator=(AForm const & rhs)
 {
 	std::cout << "Assignment operator called" << std::endl;
 	this->_isSigned = rhs.getIsSigned();
-	this->_target = rhs.getTarget();
 	return (*this);
 }
 
@@ -100,8 +94,7 @@ std::ostream &	operator<<(std::ostream & o, AForm const & rhs)
 {
 	o << "Form: " << rhs.getName() << std::endl <<
 		"Signing grade: " << rhs.getSignGrade() << std::endl <<
-		"Execution grade: " << rhs.getExecGrade() << std::endl <<
-		"Target: " << rhs.getTarget() << std::endl;
+		"Execution grade: " << rhs.getExecGrade() << std::endl;
 	if (rhs.getIsSigned() == false)
 		o << "This form is not signed.";
 	else 
