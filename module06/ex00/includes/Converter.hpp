@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 01:10:32 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/02 15:05:21 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/27 16:28:07 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ class Converter
 		double	_literal;
 
 		int	parseInput(std::string literal) const;
+		int	isExeption(std::string literal) const;
 };

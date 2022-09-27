@@ -6,15 +6,11 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:06:58 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/02 18:57:48 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/27 17:05:40 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
-
-/*
-	Gérer +a || -a || 4fffffff ?
-*/
 
 int main(int argc, char *argv[])
 {
@@ -39,10 +35,14 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	std::cout << std::endl;
+
 	converter->printChar();
 	converter->printInt();
 	converter->printFloat();
 	converter->printDouble();
+
+	std::cout << std::endl;
 
 	delete(converter);
 	return 0;
