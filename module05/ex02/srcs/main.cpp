@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/26 19:33:47 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/27 15:27:47 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	main(void)
 {
 	srand(time(NULL));
+
+	std::cout << std::endl << std::endl << "============ SHRUBBERY FORM TEST ============ " << std::endl << std::endl << std::endl;
 
 	Bureaucrat				mark("Mark", 1);
 	ShrubberyCreationForm	shrubForm("Helly");
@@ -28,6 +30,8 @@ int	main(void)
 	mark.executeForm(shrubForm);
 	std::cout << std::endl;
 
+	std::cout << std::endl << std::endl << "============ ROBOTOMY FORM TEST ============ " << std::endl << std::endl << std::endl;
+
 	Bureaucrat			irving("Irving", 1);
 	RobotomyRequestForm	robotForm("Dylan");
 
@@ -37,6 +41,8 @@ int	main(void)
 	std::cout << std::endl;
 	irving.executeForm(robotForm);
 	std::cout << std::endl;
+
+	std::cout << std::endl << std::endl << "============ PRESIDENTIAL FORM TEST ============ " << std::endl << std::endl << std::endl;
 
 	Bureaucrat				dylan("Dylan", 1);
 	PresidentialPardonForm	PresForm("Mark");
