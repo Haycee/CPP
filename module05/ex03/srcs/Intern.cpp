@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 17:14:44 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/03 02:22:52 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/27 15:14:06 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,9 @@ int	Intern::_findForm(std::string form) const
 	return (0);
 }
 
-AForm	*Intern::makeForm(std::string form, std::string target) const
+AForm	*Intern::makeForm(std::string form, std::string target)
 {	
 	int	formNumber = _findForm(form);
-	std::cout << formNumber << std::endl;
-
 
 	switch (formNumber)
 	{
