@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:42:27 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/26 03:00:09 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 19:51:32 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target)
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src)
-	: AForm(src)
+	: AForm(src.getName(), src.getSignGrade(), src.getExecGrade()), _target(src._target)
 {
 	std::cout << "RobotomyRequestForm Copy constructor called" << std::endl;
 }

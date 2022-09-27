@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 12:48:28 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/26 03:01:41 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 19:51:40 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & src)
-	: AForm(src)
+	: AForm(src.getName(), src.getSignGrade(), src.getExecGrade()), _target(src._target)
 {
 	std::cout << "ShrubberyCreationForm Copy constructor called" << std::endl;
 }
