@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 01:10:33 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/29 02:24:16 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 11:10:09 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ Converter::Converter(std::string literal)
 	std::cout << "Converter constructor called" << std::endl;
 	if (this->Converter::parseInput(literal) == 0)
 		throw ParsingException();
-	this->_literal = strtod(const_cast<char*>(literal.c_str()), NULL);
+	if (literal.length() == 1 && !std::isdigit(literal[0]))
+		this->_literal = static_cast<char>(literal[0]);
+	else
+		this->_literal = strtod(const_cast<char*>(literal.c_str()), NULL);
+
 }
 
 Converter::Converter(Converter const & src) 
@@ -40,9 +44,9 @@ Converter::~Converter(void)
 
 int	Converter::isExeption(std::string literal) const
 {
-	std::string exeptions[5] = {"nan", "inf", "-inf", "inff", "-inff"};
+	std::string exeptions[8] = {"nan", "nanf", "inf", "-inf", "inff", "-inff", "+inf", "+inff"};
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 8; i++)
 	{
 		if (literal == exeptions[i])
 			return (1);
@@ -56,7 +60,7 @@ int	Converter::parseInput(std::string literal) const
 	int start = 0;
 	int	dotCount = 0;
 
-	if (isExeption(literal))
+	if (isExeption(literal) || literal.length() == 1)
 		return (1);
 
 	if (literal[0] == '-' || literal[0] == '+')
