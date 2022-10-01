@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 17:59:38 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/05 02:14:33 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/10/01 15:21:58 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Span::Span()
 	return;
 }
 
-Span::Span(unsigned int size) : _size(size)
+Span::Span(unsigned int N) : _size(N)
 {
 	std::cout << "Span constructor called" << std::endl;
 	return;

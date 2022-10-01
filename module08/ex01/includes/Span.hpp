@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:00:39 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/05 01:51:17 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/10/01 15:39:00 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ class Span
 {
 	public:
 
-		Span(unsigned int size);
+		Span(unsigned int N);
 		Span(Span const & src);
 		~Span(void);
 
@@ -34,7 +34,7 @@ class Span
 			public:
 				virtual const char*	what() const throw()
 				{
-					return ("This class is already full.");
+					return ("Class full.");
 				}
 		};
 
@@ -51,8 +51,8 @@ class Span
 
 	private:
 
-	std::vector<int>	_vect;
-	unsigned int		_size;
+		Span();
 
-	Span();
+		std::vector<int>	_vect;
+		unsigned int		_size;
 };
