@@ -6,7 +6,7 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 18:37:07 by agirardi          #+#    #+#             */
-/*   Updated: 2022/08/04 02:54:25 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/10/01 14:09:13 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,23 @@ class Array
 
 		Array();
 		Array(unsigned int n);
-		Array(Array<T> const & src);
+		Array(Array<T> & src);
 		~Array(void);
 
 		int	size(void) const;
 		T	*getArray(void) const;
 
-		Array<T>	& operator=(Array<T> const & rhs);
-		T		& operator[](int);
+		Array<T>	& operator=(Array<T> & rhs);
+		T			& operator[](int);
 
+		class OutOfRangeException : public std::exception
+		{
+			public:
+				virtual const char*	what() const throw()
+				{
+					return ("Index is out of range.");
+				}
+		};
 
 	private:
 
@@ -47,16 +55,19 @@ Array<T>::Array()
 }
 
 template <typename T>
-Array<T>::Array(unsigned int n)
+Array<T>::Array(unsigned int n) : _size(n)
 {
 	std::cout << "Array constructor called" << std::endl;
 	this->_array = new T[n];
-	this->_size = n;
+	for (unsigned int i = 0; i < n; i++)
+	{
+		this->_array[i] = 0;
+	}
 	return;
 }
 
 template <typename T>
-Array<T>::Array(Array<T> const & src) 
+Array<T>::Array(Array<T> & src) 
 {
 	std::cout << "Array Copy constructor called" << std::endl;
 	*this = src;
@@ -83,7 +94,7 @@ T	*Array<T>::getArray(void) const
 }
 
 template <typename T>
-Array<T> & Array<T>::operator=(Array<T> const & rhs)
+Array<T> & Array<T>::operator=(Array<T> & rhs)
 {
 	std::cout << "Assignment operator called" << std::endl;
 	this->_size = rhs.size();
@@ -99,7 +110,7 @@ Array<T> & Array<T>::operator=(Array<T> const & rhs)
 template <typename T>
 T	& Array<T>::operator[](int index)
 {
-	if (index >= this->_size)
-		throw std::out_of_range("Index is out of range");
+	if ( index < 0 || index >= this->_size)
+		throw OutOfRangeException();
 	return this->_array[index];
 }
