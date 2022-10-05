@@ -6,16 +6,11 @@
 /*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:06:58 by agirardi          #+#    #+#             */
-/*   Updated: 2022/10/01 15:05:29 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2022/10/05 11:14:21 by agirardi         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
-
-/*
-	https://www.youtube.com/watch?v=SgcHcbQ0RCQ
-	https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1176/lectures/lecture05/05_Templates.pdf
-*/
 
 int main(void)
 {
