@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <list>
+#include <vector>
 
 class PmergeMe
 {
@@ -26,4 +27,9 @@ class PmergeMe
 
 
     int   parseInput(std::string expression);
+    std::vector<int> mergeSortVector(std::vector<int>& vec);
+    std::vector<int> mergeVector(const std::vector<int>& left, const std::vector<int>& right);
+    std::list<int> mergeList(const std::list<int>& left, const std::list<int>& right);
+    std::list<int> mergeSortList(std::list<int>& lst);
+
 };

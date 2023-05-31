@@ -54,35 +54,120 @@ int   PmergeMe::parseInput(std::string num)
     return 1;
 }
 
+std::vector<int> PmergeMe::mergeVector(const std::vector<int>& left, const std::vector<int>& right)
+{
+    std::vector<int> result;
+    std::vector<int>::const_iterator left_it = left.begin(), right_it = right.begin();
+
+    while (left_it != left.end() && right_it != right.end())
+    {
+        if (*left_it <= *right_it)
+        {
+            result.push_back(*left_it);
+            ++left_it;
+        }
+        else
+        {
+            result.push_back(*right_it);
+            ++right_it;
+        }
+    }
+
+    while (left_it != left.end())
+    {
+        result.push_back(*left_it);
+        ++left_it;
+    }
+
+    while (right_it != right.end())
+    {
+        result.push_back(*right_it);
+        ++right_it;
+    }
+
+    return result;
+}
+
+std::vector<int> PmergeMe::mergeSortVector(std::vector<int>& vec)
+{
+    if (vec.size() <= 1)
+        return vec;
+
+    std::vector<int> left, right, result;
+    std::vector<int>::iterator middle = vec.begin();
+
+    std::advance(middle, vec.size() / 2);
+    std::copy(vec.begin(), middle, std::back_inserter(left));
+    std::copy(middle, vec.end(), std::back_inserter(right));
+
+    left = mergeSortVector(left);
+    right = mergeSortVector(right);
+    result = mergeVector(left, right);
+
+    return result;
+}
+
 std::vector<int> PmergeMe::sortVector()
 {
-  std::vector<int> vec(this->vector);
-
-  for (std::vector<int>::size_type i = 0; i < vec.size()-1; ++i) {
-      for (std::vector<int>::size_type j = 0; j < vec.size()-1-i; ++j) {
-          if (vec[j] > vec[j+1]) {
-              std::swap(vec[j], vec[j+1]);
-          }
-      }
-  }
-
-  return vec;
+    std::vector<int> vec(this->vector);
+    return mergeSortVector(vec);
 }
 
 std::list<int> PmergeMe::sortList()
 {
-  std::list<int> lst(this->list);
+    std::list<int> lst(this->list);
+    return mergeSortList(lst);
+}
 
-  for (std::list<int>::iterator it_i = lst.begin(); it_i != lst.end(); ++it_i) {
-      std::list<int>::iterator it_j = it_i;
-      ++it_j;
+std::list<int> PmergeMe::mergeList(const std::list<int>& left, const std::list<int>& right)
+{
+    std::list<int> result;
+    std::list<int>::const_iterator left_it = left.begin(), right_it = right.begin();
 
-      for (; it_j != lst.end(); ++it_j) {
-          if (*it_i > *it_j) {
-              std::swap(*it_i, *it_j);
-          }
-      }
-  }
+    while (left_it != left.end() && right_it != right.end())
+    {
+        if (*left_it <= *right_it)
+        {
+            result.push_back(*left_it);
+            ++left_it;
+        }
+        else
+        {
+            result.push_back(*right_it);
+            ++right_it;
+        }
+    }
 
-  return lst;
+    while (left_it != left.end())
+    {
+        result.push_back(*left_it);
+        ++left_it;
+    }
+
+    while (right_it != right.end())
+    {
+        result.push_back(*right_it);
+        ++right_it;
+    }
+
+    return result;
+}
+
+std::list<int> PmergeMe::mergeSortList(std::list<int>& lst)
+{
+    if (lst.size() <= 1)
+        return lst;
+
+    std::list<int> left, right, result;
+    std::list<int>::iterator middle = lst.begin();
+
+    std::advance(middle, lst.size() / 2);
+    std::copy(lst.begin(), middle, std::back_inserter(left));
+    std::copy(middle, lst.end(), std::back_inserter(right));
+
+    left = mergeSortList(left);
+    right = mergeSortList(right);
+    result = mergeList(left, right);
+
+    return result;
 }
