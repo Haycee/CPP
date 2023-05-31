@@ -49,7 +49,7 @@ int   PmergeMe::parseInput(std::string num)
     }
 
     long number = atol(num.c_str());
-    if((number > INT_MAX || number < INT_MIN) || number <= 0) { return 0; }
+    if((number > INT_MAX || number < INT_MIN) || number < 0) { return 0; }
 
     return 1;
 }

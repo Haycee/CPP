@@ -159,10 +159,6 @@ void BitcoinExchange::parseDate(const std::string &date) const
   std::stringstream ssDay(date.substr(secondHyphen + 1));
   ssDay >> day;
 
-  std::cout << day << std::endl;
-  std::cout << year << " " << month << std::endl;
-  std::cout << maxDayInMonth(year, month) << std::endl;
-
   if (ssYear.str().length() != 4 || year < 0) throw InvalidDateException();
   if (ssMonth.str().length() != 2 || month > 12 || month < 1) throw InvalidDateException();
   if (ssDay.str().length() != 2 || day < 1 || day > maxDayInMonth(year, month)) throw InvalidDateException();
