@@ -54,32 +54,20 @@ int   PmergeMe::parseInput(std::string num)
     return 1;
 }
 
-void PmergeMe::insertionSortList(std::list<int>& lst)
+void PmergeMe::insertionSortList(std::list<int>& lst) 
 {
-    if (lst.empty())
-        return;
-
-    std::list<int>::iterator i = lst.begin();
-    ++i;
-
-    while (i != lst.end())
+    for (std::list<int>::iterator i = lst.begin(); i != lst.end(); ++i)
     {
         std::list<int>::iterator j = i;
-        --j;
-
-        while (true)
+        j++;
+        while (j != lst.end()) 
         {
-            if (*i < *j)
+            if (*i > *j)
             {
                 std::swap(*i, *j);
-                if (j != lst.begin())
-                    --j;
             }
-            else
-                break;
+            j++;
         }
-
-        ++i;
     }
 }
 
