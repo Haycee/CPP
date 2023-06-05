@@ -23,13 +23,13 @@ class PmergeMe
 
   private:
     std::vector<int>  vector;
-    std::list<int> list;
+    std::list<int>  list;
 
-    int   parseInput(std::string expression);
+    int parseInput(std::string expression);
     
-    void insertionSortVector(std::vector<int>& vec, int left, int right);
-    void mergeVector(std::vector<int>& vec, int left, int mid, int right);
-    void mergeInsertionSortVector(std::vector<int>& vec, int left, int right);
+    void insertionSortVector(std::vector<int>& vec);
+    std::vector<int> mergeVector(const std::vector<int>& left, const std::vector<int>& right);
+    std::vector<int> mergeInsertionSortVector(std::vector<int>& vec);
 
     void insertionSortList(std::list<int>& lst);
     std::list<int> mergList(const std::list<int>& left, const std::list<int>& right);
