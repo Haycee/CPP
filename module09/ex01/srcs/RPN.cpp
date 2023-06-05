@@ -55,7 +55,8 @@ void RPN::calculateSign(char c)
     break;
   case '/':
     if (secondNum == 0)
-      throw InvalidExpressionException();    this->stack.push(firstNum / secondNum);
+      throw InvalidExpressionException();
+      this->stack.push(firstNum / secondNum);
     break;
   default:
     break;

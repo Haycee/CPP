@@ -42,16 +42,12 @@ int main(int argc, char *argv[])
     double elapsedSecsVector = double(endVector - beginVector) / double(CLOCKS_PER_SEC);
     std::cout << "After: ";
     printVector(sorted_vector);
-    std::cout << "Time to process a range of " << pmergeMe.getVector().size() << " elements with std::vector : " << elapsedSecsVector << " seconds" << std::endl << std::endl << std::endl;
+    std::cout << "Time to process a range of " << pmergeMe.getVector().size() << " elements with std::vector : " << elapsedSecsVector << " seconds" << std::endl;
 
-    std::cout << "Before: ";
-    printList(pmergeMe.getList());
     clock_t beginList = clock();
     std::list<int> sorted_list = pmergeMe.sortList();
     clock_t endList = clock();
     double elapsedSecsList = double(endList - beginList) / double(CLOCKS_PER_SEC);
-    std::cout << "After: ";
-    printList(sorted_list);
     std::cout << "Time to process a range of " << pmergeMe.getList().size() << " elements with std::list : " << elapsedSecsList << " seconds" << std::endl;
 
   } catch (std::exception &e) {
