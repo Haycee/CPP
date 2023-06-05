@@ -2,8 +2,7 @@
 
 PmergeMe::PmergeMe() {}
 
-PmergeMe::PmergeMe(std::string numbers)
-{
+PmergeMe::PmergeMe(std::string numbers) {
     std::istringstream iss(numbers);
     std::string num;
 
@@ -38,8 +37,7 @@ PmergeMe &	PmergeMe::operator=(PmergeMe const & rhs)
   return (*this);
 }
 
-int   PmergeMe::parseInput(std::string num)
-{
+int   PmergeMe::parseInput(std::string num) {
     if(num.empty()) { return 0; }
     
     for(size_t i = 0; i < num.size(); i++) {
@@ -54,16 +52,12 @@ int   PmergeMe::parseInput(std::string num)
     return 1;
 }
 
-void PmergeMe::insertionSortList(std::list<int>& lst) 
-{
-    for (std::list<int>::iterator i = lst.begin(); i != lst.end(); ++i)
-    {
+void PmergeMe::insertionSortList(std::list<int>& lst) {
+    for (std::list<int>::iterator i = lst.begin(); i != lst.end(); ++i) {
         std::list<int>::iterator j = i;
         j++;
-        while (j != lst.end()) 
-        {
-            if (*i > *j)
-            {
+        while (j != lst.end()) {
+            if (*i > *j) {
                 std::swap(*i, *j);
             }
             j++;
@@ -71,33 +65,27 @@ void PmergeMe::insertionSortList(std::list<int>& lst)
     }
 }
 
-std::list<int> PmergeMe::mergList(const std::list<int>& left, const std::list<int>& right)
-{
+std::list<int> PmergeMe::mergList(const std::list<int>& left, const std::list<int>& right) {
     std::list<int> result;
     std::list<int>::const_iterator left_it = left.begin(), right_it = right.begin();
 
-    while (left_it != left.end() && right_it != right.end())
-    {
-        if (*left_it <= *right_it)
-        {
+    while (left_it != left.end() && right_it != right.end()) {
+        if (*left_it <= *right_it) {
             result.push_back(*left_it);
             ++left_it;
         }
-        else
-        {
+        else {
             result.push_back(*right_it);
             ++right_it;
         }
     }
 
-    while (left_it != left.end())
-    {
+    while (left_it != left.end()) {
         result.push_back(*left_it);
         ++left_it;
     }
 
-    while (right_it != right.end())
-    {
+    while (right_it != right.end()) {
         result.push_back(*right_it);
         ++right_it;
     }
@@ -105,10 +93,8 @@ std::list<int> PmergeMe::mergList(const std::list<int>& left, const std::list<in
     return result;
 }
 
-std::list<int> PmergeMe::mergeInsertionSortList(std::list<int>& lst)
-{
-    if (lst.size() <= 10)  
-    {
+std::list<int> PmergeMe::mergeInsertionSortList(std::list<int>& lst) {
+    if (lst.size() <= 10) {
         insertionSortList(lst);
         return lst;
     }
