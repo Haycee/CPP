@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agirardi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alex <alex@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:15:18 by agirardi          #+#    #+#             */
-/*   Updated: 2022/09/26 01:34:23 by agirardi         ###   ########lyon.fr   */
+/*   Updated: 2025/02/05 07:13:04 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int	main(void)
 {
-	// AAnimal test;
-
 	std::cout << "====== LEAK TEST ======" << std::endl << std::endl;
 
 	AAnimal	*objAnimal[4];
