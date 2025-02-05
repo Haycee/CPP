@@ -20,8 +20,7 @@ Dog::Dog()
 	return;
 }
 
-Dog::Dog(Dog const & src) 
-	: _brain(new Brain())
+Dog::Dog(Dog const & src) : AAnimal(src), _brain(new Brain())
 {
 	std::cout << "Dog Copy constructor called" << std::endl;
 	*this = src;

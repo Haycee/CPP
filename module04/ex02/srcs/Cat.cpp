@@ -20,8 +20,7 @@ Cat::Cat()
 	return;
 }
 
-Cat::Cat(Cat const & src) 
-	: _brain(new Brain())
+Cat::Cat(Cat const & src) : AAnimal(src), _brain(new Brain())
 {
 	std::cout << "Cat Copy constructor called" << std::endl;
 	*this = src;
